@@ -6,7 +6,7 @@ struct AnonUnion
         int x;
         int y;
     };
-};
+} au;
 
 struct NamedUnion
 {
@@ -14,37 +14,31 @@ struct NamedUnion
         int x;
         int y;
     } data;
-};
+} nu;
 
 struct AnonStruct
 {
-    struct {
+    struct
+    {
         int x;
         int y;
     };
-};
+} as;
 
 struct NamedStruct
 {
-    struct {
+    struct
+    {
         int x;
         int y;
     } data;
-};
+} ns;
 
-int main(int, char**)
+int main(int, char **)
 {
-    AnonUnion au;
     au.x = 1;
-
-    NamedUnion nu;
     nu.data.x = 2;
-
-    AnonStruct as;
     as.x = 3;
-
-    NamedStruct ns;
     ns.data.x = 4;
-
-   std::cout << au.x << ", " << nu.data.x << ", " << as.x << ", " << ns.data.x;
+    std::cout << au.x << ", " << nu.data.x << ", " << as.x << ", " << ns.data.x;
 }
