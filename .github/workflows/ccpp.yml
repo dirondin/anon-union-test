@@ -1,0 +1,14 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Archlinux CMake builder
+      uses: codehz/arch-cmake-builder@v0.1.3
+ 
